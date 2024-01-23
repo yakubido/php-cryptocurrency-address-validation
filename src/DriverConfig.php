@@ -16,11 +16,13 @@ readonly class DriverConfig
      * @param class-string<T> $driver
      * @param array $mainnet
      * @param array $testnet
+     * @param array $regtest
      */
     public function __construct(
         private string $driver,
         private array $mainnet = [],
-        private array $testnet = []
+        private array $testnet = [],
+        private array $regtest = [],
     )
     {
     }
@@ -41,17 +43,16 @@ readonly class DriverConfig
             return $this->mainnet;
         }
 
-        return $this->testnet
-            ?: $this->mainnet
-                ?: [];
+        return $this->regtest ?: $this->testnet ?: $this->mainnet ?: [];
     }
 
     public static function __set_state(array $state): DriverConfig
     {
         return new self(
-            $state['driver'],
-            $state['mainnet'],
-            $state['testnet']
+            driver: $state['driver'],
+            mainnet: $state['mainnet'],
+            testnet: $state['testnet'],
+            regtest: $state['regtest'],
         );
     }
 }

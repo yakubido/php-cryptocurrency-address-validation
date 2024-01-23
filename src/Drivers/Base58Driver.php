@@ -19,10 +19,7 @@ abstract class Base58Driver extends AbstractDriver
 {
     public function match(string $address): bool
     {
-        $prefix =  implode('|', array_keys($this->options));
-        $expr = sprintf('/^(%s)[a-km-zA-HJ-NP-Z1-9]{25,34}$/', $prefix);
-
-        return preg_match($expr, $address) === 1;
+        return preg_match('/^[a-km-zA-HJ-NP-Z1-9]{25,34}$/', $address) === 1;
     }
 
     protected function getVersion($address): ?string

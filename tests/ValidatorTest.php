@@ -93,6 +93,9 @@ class ValidatorTest extends TestCase
             'Dogecoin #5' => [CurrencyEnum::DOGECOIN, 'testnet', true, 'nd5N1KW1waCicK1vqfwtTcBSbQCHBLv2Um'],
             'Dogecoin #6' => [CurrencyEnum::DOGECOIN, 'testnet', false, 'DFundMr7W8PjB6ZmVwGv1L1WtZ2X3m3KgQ'],
             'Dogecoin #7' => [CurrencyEnum::DOGECOIN, 'mainnet', false, 'n3TZFrdPvwGqfPC7vBb8PGgbFwc1Cnxq9h'],
+            'Dogecoin #8' => [CurrencyEnum::DOGECOIN, 'regtest', true, 'n3TZFrdPvwGqfPC7vBb8PGgbFwc1Cnxq9h'],
+            'Dogecoin #9' => [CurrencyEnum::DOGECOIN, 'regtest', false, 'mketxxXxaBeH7AhCBMatdH5ATVad2XHQdj'],
+            'Dogecoin #10' => [CurrencyEnum::DOGECOIN, 'regtest', false, 'DFrGqzk4ZnTcK1gYtxZ9QDJsDiVM8v8gwV'],
             //
             'Ethereum #1' => [CurrencyEnum::ETHEREUM, 'mainnet', true, '0xe80b351948D0b87EE6A53e057A91467d54468D91'],
             'Ethereum #2' => [CurrencyEnum::ETHEREUM, 'testnet', true, '0x799aD3Ff7Ef43DfD1473F9b8a8C4237c22D8113F'],

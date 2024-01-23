@@ -60,8 +60,9 @@ return [
     CurrencyEnum::DOGECOIN->value => [
         new DriverConfig(
             Drivers\DefaultBase58Driver::class,
-            ['D' => '1E', '9' => '16', 'A' => '16'],
-            ['n' => '71', 'm' => '6F', '2' => 'C4',],
+            ['1E', '16'],
+            ['71', 'C4'],
+            ['6F', 'C4'],
         ),
     ],
     CurrencyEnum::EOS->value => [
