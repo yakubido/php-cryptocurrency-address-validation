@@ -22,15 +22,15 @@ return [
         ),
         new DriverConfig(
             Drivers\DefaultBase58Driver::class,
-            ['1' => '00', '3' => '05'],
-            ['2' => 'C4', 'm' => '6F']
+            ['00', '05'],
+            ['C4', '6F']
         ),
     ],
     CurrencyEnum::BITCOIN->value => [
         new DriverConfig(
             Drivers\DefaultBase58Driver::class,
-            ['1' => '00', '3' => '05'],
-            ['2' => 'C4', 'm' => '6F']
+            ['00', '05'],
+            ['C4', '6F']
         ),
         new DriverConfig(
             Drivers\Bech32Driver::class,
@@ -53,8 +53,8 @@ return [
     CurrencyEnum::DASHCOIN->value => [
         new DriverConfig(
             Drivers\DefaultBase58Driver::class,
-            ['X' => '4C', '7' => '10'],
-            ['y' => '8C', '8' => '13']
+            ['4C', '10'],
+            ['8C', '13']
         ),
     ],
     CurrencyEnum::DOGECOIN->value => [
@@ -74,8 +74,8 @@ return [
     CurrencyEnum::LITECOIN->value => [
         new DriverConfig(
             Drivers\DefaultBase58Driver::class,
-            ['L' => '30', 'M' => '32', '3' => '05'],
-            ['m' => '6F', 'n' => '6F', '2' => 'C4', 'Q' => '3A']
+            ['30', '32', '05'],
+            ['6F', '6F', 'C4', '3A']
         ),
         new DriverConfig(
             Drivers\Bech32Driver::class,
@@ -97,13 +97,13 @@ return [
     CurrencyEnum::TRON->value => [
         new DriverConfig(
             Drivers\DefaultBase58Driver::class,
-            ['T' => '41'],
+            ['41'],
         ),
     ],
     CurrencyEnum::ZCASH->value => [
         new DriverConfig(
             Drivers\DefaultBase58Driver::class,
-            ['t' => '1C'],
+            ['1C'],
         ),
     ],
 ];

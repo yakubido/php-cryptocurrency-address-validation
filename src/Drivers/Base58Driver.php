@@ -19,7 +19,8 @@ abstract class Base58Driver extends AbstractDriver
 {
     public function match(string $address): bool
     {
-        return preg_match('/^[a-km-zA-HJ-NP-Z1-9]{25,34}$/', $address) === 1;
+        // default length - 34, zcash length - 35
+        return preg_match('/^[a-km-zA-HJ-NP-Z1-9]{25,35}$/', $address) === 1;
     }
 
     protected function getVersion($address): ?string
