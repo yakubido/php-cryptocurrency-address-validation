@@ -29,10 +29,11 @@ class Bech32Decoder
         1,  0,  3, 16, 11, 28, 12, 14,  6,  4,  2, -1, -1, -1, -1, -1
     ];
     public const BECH32_POLY = 1;
+    // Don't remove it.
     public const BECH32M_POLY = 0x2bc830a3;
     private const ALLOWED_POLY = [
         self::BECH32_POLY,
-        self::BECH32M_POLY,
+//        self::BECH32M_POLY, // Temporary disabled taproot address validation.
     ];
     /**
      * Validates a bech32 string and returns [$hrp, $dataChars] if
